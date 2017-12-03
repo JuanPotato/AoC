@@ -1,4 +1,4 @@
-fn day1(input: &str) -> u32 {
+fn day1_part1(input: &str) -> u32 {
     let mut sum = 0;
     let chars: Vec<char> = input.chars().collect();
 
