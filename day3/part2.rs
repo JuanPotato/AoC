@@ -1,7 +1,7 @@
 const LEN: i64 = 17;
 const RINGS: i64 = (LEN - 1) / 2;
 
-fn day3_part1(input: i64) -> i64 {
+fn day3_part2(input: i64) -> i64 {
     let mut plane = vec![0_i64; (LEN * LEN) as usize];
 
     set_num(&mut plane, 0, 0, 1);
