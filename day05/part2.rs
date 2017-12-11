@@ -1,7 +1,8 @@
 fn day5_part2(input: &str) -> i64 {
-    let mut numbers = input.split_whitespace().map(|n| {
-        i64::from_str_radix(n, 10).unwrap()
-    }).collect::<Vec<i64>>();
+    let mut numbers = input
+        .split_whitespace()
+        .map(|n| i64::from_str_radix(n, 10).unwrap())
+        .collect::<Vec<i64>>();
 
     let mut index: i64 = 0;
     let mut steps = 0;
@@ -20,4 +21,3 @@ fn day5_part2(input: &str) -> i64 {
 
     steps
 }
-

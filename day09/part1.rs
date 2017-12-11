@@ -21,14 +21,14 @@ fn day9_part1(input: &str) -> i64 {
                 if !garbage {
                     level += 1;
                 }
-            },
+            }
 
             '}' => {
                 if !garbage {
                     score += level;
                     level -= 1;
                 }
-            },
+            }
 
             _ => continue,
         }

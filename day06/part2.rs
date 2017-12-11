@@ -4,7 +4,11 @@ fn day6_part2(input: &str) -> i64 {
 
     let mut state = [0u8; 16];
 
-    for (i, n) in input.split_whitespace().map(|n| u8::from_str_radix(n, 10).unwrap()).enumerate() {
+    for (i, n) in input
+        .split_whitespace()
+        .map(|n| u8::from_str_radix(n, 10).unwrap())
+        .enumerate()
+    {
         state[i] = n;
     }
 
@@ -12,11 +16,17 @@ fn day6_part2(input: &str) -> i64 {
     let mut cycles = 0;
 
     loop {
-        let max_index = state.iter().enumerate().rev().max_by_key(|e| e.1).unwrap().0;
+        let max_index = state
+            .iter()
+            .enumerate()
+            .rev()
+            .max_by_key(|e| e.1)
+            .unwrap()
+            .0;
         let max = state[max_index];
         state[max_index] = 0;
 
-        for i in  0..max {
+        for i in 0..max {
             state[(max_index + 1 + i as usize) % len] += 1;
         }
 
@@ -29,4 +39,3 @@ fn day6_part2(input: &str) -> i64 {
 
     cycles - states.get(&state).unwrap()
 }
-

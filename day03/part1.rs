@@ -12,7 +12,8 @@ fn get_coords(num: i64) -> (i64, i64) {
     let mut x = 0;
     let mut y = 0;
 
-    if sqrt % 2 == 0 { // even
+    if sqrt % 2 == 0 {
+        // even
         x = -sqrt / 2;
         y = -x;
 
@@ -38,4 +39,3 @@ fn get_coords(num: i64) -> (i64, i64) {
 
     (x, y)
 }
-

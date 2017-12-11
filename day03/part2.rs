@@ -6,7 +6,7 @@ fn day3_part2(input: i64) -> i64 {
 
     set_num(&mut plane, 0, 0, 1);
 
-    for i in 2..LEN*LEN {
+    for i in 2..LEN * LEN {
         let (x, y) = get_coords(i);
         let sum = sum_around(&plane, x, y);
 
@@ -74,7 +74,7 @@ fn sum_around(arr: &[i64], x: i64, y: i64) -> i64 {
 
 fn print_arr(arr: &[i64], len: i64) {
     for i in 0..len {
-        println!("{:?}", &arr[(i*len) as usize .. ((i+1)*len) as usize]);
+        println!("{:?}", &arr[(i * len) as usize..((i + 1) * len) as usize]);
     }
 }
 
@@ -87,7 +87,8 @@ fn get_coords(num: i64) -> (i64, i64) {
     let mut x = 0;
     let mut y = 0;
 
-    if sqrt % 2 == 0 { // even
+    if sqrt % 2 == 0 {
+        // even
         x = -sqrt / 2;
         y = -x;
 

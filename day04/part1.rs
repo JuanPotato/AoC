@@ -7,7 +7,6 @@ fn is_valid(input: &str) -> bool {
     words.sort();
     let before_len = words.len();
     words.dedup();
-    
+
     before_len == words.len()
 }
-

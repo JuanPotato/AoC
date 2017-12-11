@@ -131,4 +131,3 @@ fn day7_part2(input: &str) -> i64 {
 
     old_odd.1 - towers[old_odd.0].load
 }
-

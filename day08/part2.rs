@@ -11,7 +11,7 @@ where
     if is_set { *map.get(key).unwrap() } else { def }
 }
 
-fn day8_part1(input: &str) -> i64 {
+fn day8_part2(input: &str) -> i64 {
     let mut map: HashMap<&str, i64> = HashMap::new();
     let mut max = 0;
 

@@ -9,7 +9,12 @@ fn day7_part1(input: &str) -> String {
             .collect::<Vec<&str>>();
 
         let carried = if parts.len() > 2 {
-            Some(parts[2..].iter().map(|x| x.to_string()).collect::<Vec<String>>())
+            Some(
+                parts[2..]
+                    .iter()
+                    .map(|x| x.to_string())
+                    .collect::<Vec<String>>(),
+            )
         } else {
             None
         };
@@ -33,4 +38,3 @@ fn day7_part1(input: &str) -> String {
 
     towers.keys().last().unwrap().to_string()
 }
-
